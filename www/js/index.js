@@ -38,7 +38,7 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.suicide');
+        var listeningElement = parentElement.querySelector('#suicide');
 
         listeningElement.innerHTML = "murder!!!!";
 
