@@ -12,5 +12,6 @@ gen
 out
 # Gradle builds
 platforms/android/build
+platforms/android/assets/www
 .gradle
 www/css
