@@ -16,6 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+(function($) {
 var app = {
     // Application Constructor
     initialize: function() {
@@ -40,10 +41,11 @@ var app = {
         var parentElement = document.getElementById(id);
         var listeningElement = $('#suicide');
 
-        listeningElement.innerHTML = "murder!!!!";
+        listeningElement.html("murder!!!!");
 
         console.log('Received Event: ' + id);
     }
 };
 
 app.initialize();
+})(jQuery);
