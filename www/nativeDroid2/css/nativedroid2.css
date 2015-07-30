@@ -6,7 +6,7 @@
 /*@import url("nativedroid2.color.purple.css");*/
 /*@import url("nativedroid2.color.deep-purple.css");*/
 /*@import url("nativedroid2.color.indigo.css");*/
-/*@import url("nativedroid2.color.light-blue.css");*/
+@import url("nativedroid2.color.light-blue.css"); /*this is the color used for the top bar*/
 /*@import url("nativedroid2.color.cyan.css");*/
 /*@import url("nativedroid2.color.teal.css");*/
 /*@import url("nativedroid2.color.green.css");*/
@@ -15,7 +15,7 @@
 /*@import url("nativedroid2.color.yellow.css");*/
 /*@import url("nativedroid2.color.amber.css");*/
 /*@import url("nativedroid2.color.orange.css");*/
-@import url("nativedroid2.color.deep-orange.css");
+/*@import url("nativedroid2.color.deep-orange.css");*/
 /*@import url("nativedroid2.color.brown.css");*/
 /*@import url("nativedroid2.color.grey.css");*/
 /*@import url("nativedroid2.color.blue-grey.css");*/

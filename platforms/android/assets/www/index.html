@@ -1,23 +1,44 @@
 <!DOCTYPE html>
 <html>
   <head>
-
+	<title>Login</title>
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-
+	
     <!-- Imports -->
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+    <!--nativedroid made by http://nativedroid.godesign.ch-->
     <link rel="stylesheet" href="nativeDroid2/vendor/waves/waves.min.css" />
     <link rel="stylesheet" href="nativeDroid2/vendor/wow/animate.css" />
-    <link rel="stylesheet" href="nativeDroid2/css/nativedroid2.css" />
-
+    <link rel="stylesheet" href="nativeDroid2/css/nativedroid2.css" /> 
+    
     <!-- Custom -->
     <link rel="stylesheet" href="css/main.css">
   </head>
 
   <body>
+  
+  	<div data-role="page">
+    	<div data-role="header" data-position="fixed">
+        	<h1><img src="img/hf_logo.png" alt="Handicapformidlingen logo"/></h1>
+        </div><!--end of data-role header-->
+        
+        <div role="main" class="ui-content" data-insert="false" data-wow-delay="0s">
+            <!--<div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset ui-input-has-clear">-->
+            <form name="login_form">
+            <input type="text" name="username" id="username" value="" data-clear-btn="true" placeholder="Username">
+            <input type="password" name="password" id="password" value="" data-clear-btn="true" placeholder="Password">
+            <button type="submit" name="submit" id="submit">Login</button><!--never use input type for buttons-->
+            </form>
+           	<!--<a href="#" tabindex="-1" aria-hidden="true" class="ui-input-clear ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all ui-input-clear-hidden" title=	"Clear text">Clear text</a>-->
+            
+            </div>
+        </div><!--end of main content-->
+    </div><!--end of page-->
+    <!--
+    USE THIS AS REF IN CASE YOU'RE STUCK
     <div data-role="page">
       <div data-role="header" data-position="fixed">
         <h1>Instructions</h1>
@@ -34,7 +55,7 @@
           <li><a href="#">Guidelines</a></li>
         </ul>
       </div>
-    </div>
+    </div>-->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript" src="cordova.js"></script>

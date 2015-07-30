@@ -1,0 +1,246 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Calendar Overview</title>
+	<meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+	
+    <!-- Imports -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+    <!--nativedroid made by http://nativedroid.godesign.ch-->
+    <link rel="stylesheet" href="nativeDroid2/vendor/waves/waves.min.css" />
+    <link rel="stylesheet" href="nativeDroid2/vendor/wow/animate.css" />
+    <link rel="stylesheet" href="nativeDroid2/css/nativedroid2.css" />
+    
+    <!-- Custom -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+	<div data-role="page">
+    	<div data-role="header" data-position="fixed">
+        	<h1>Overview</h1>
+            <ol>
+            	<li class="weeks">Week 1</li>
+                <li class="weeks">Week 2</li>
+                <li class="weeks">Week 3</li>
+            </ol>
+        </div><!--end of data-role header-->
+        
+        <div role="main" class="ui-content" data-insert="false" data-wow-delay="0s">
+           <table data-role="table" class="ui-responsive ui-shadow" id="myTable">
+           		<thead>
+                    <tr>
+                    	<th></th>
+                        <th>M</th>
+                        <th>T</th>
+                        <th>W</th>
+                        <th>T</th>
+                        <th>F</th>
+                        <th>S</th>
+                        <th>S</th>
+                    </tr>
+                </thead>
+                <tbody>
+                	<tr>
+                    	<td class="time">06:00</td>
+                        <td class="red-helper"></td>
+                        <td class="orange-helper"></td>
+                        <td></td> <!--fill the rest of the entires with empty TDs so that there will be a complete underline on the page-->
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                    	<td class="time">07:00</td>
+                        <td class="red-helper"></td>
+                        <td class="orange-helper"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                    	<td class="time">08:00</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                    	<td class="time">09:00</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="pink-helper"></td>
+                        <td class="orange-helper"></td>
+                    </tr>
+                    <tr>
+                    	<td class="time">10:00</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="pink-helper"></td>
+                        <td class="orange-helper"></td>
+                    </tr>
+                    <tr>
+                    	<td class="time">11:00</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                    	<td class="time">12:00</td>
+                        <td></td>
+                        <td></td>
+                        <td class="blue-helper"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                    	<td class="time">13:00</td>
+                        <td></td>
+                        <td></td>
+                        <td class="blue-helper"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                    	<td class="time">14:00</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                    	<td class="time">15:00</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                    	<td class="time">16:00</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="orange-helper"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                    	<td class="time">17:00</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="orange-helper"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                    	<td class="time">18:00</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                    	<td class="time">19:00</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="blue-helper"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                    	<td class="time">20:00</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="blue-helper"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                    	<td class="time">21:00</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="red-helper"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                    	<td class="time">22:00</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="red-helper"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                    	<td class="time">23:00</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+           </table>
+        </div><!--end of main content-->
+    </div><!--end of page-->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+    <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+
+    <script src="nativeDroid2/vendor/waves/waves.min.js"></script>
+    <script src="nativeDroid2/vendor/wow/wow.min.js"></script>
+    <script src="nativeDroid2/js/nativedroid2.js"></script>
+    
+</body>
+</html>
