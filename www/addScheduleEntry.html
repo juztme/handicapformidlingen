@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Add schedule entry</title>
+
+	<meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+	
+    <!-- Imports -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+    <!--nativedroid made by http://nativedroid.godesign.ch-->
+    <link rel="stylesheet" href="nativeDroid2/vendor/waves/waves.min.css" />
+    <link rel="stylesheet" href="nativeDroid2/vendor/wow/animate.css" />
+    <link rel="stylesheet" href="nativeDroid2/css/nativedroid2.css" />
+	<!--Google's material design items-->
+    <link rel="stylesheet" href="css/mdl/material.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    <link rel="stylesheet" href="https://rawgithub.com/arschmitz/jquery-mobile-datepicker-wrapper/master/jquery.mobile.datepicker.css" />
+    
+    
+    <!-- Custom -->
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+
+	<div data-role="header" data-position="fixed">
+        <a href="#schedulePage" id="back-arrow"><img src="img/ic_arrow_back_white_36dp.png" alt="go back"/></a>
+        <h1>Add new entry</h1>
+        <!-- Right aligned menu below button; code taken from http://www.getmdl.io/components/index.html#menus-section -->
+		<button id="demo-menu-lower-right"
+            class="mdl-button mdl-js-button mdl-button--icon">
+            <i class="material-icons">more_vert</i>
+		</button>
+
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+            for="demo-menu-lower-right">
+          <li class="mdl-menu__item">Remove instructions</li>
+          <li class="mdl-menu__item">Remove entry</li>
+        </ul>
+            
+     </div><!--end of data-role header-->
+
+	<div data-role="content" class="ui-content" role="main">
+    	
+        <h3>Important details</h3>
+    	<br/>
+        <ul data-role="listview" data-icon="false">
+            <li><img class="img-settings" src="img/calendar.svg" alt="date"/><input type="text" placeholder="Date"/></li>
+            <li><img class="img-settings" src="img/ic_query_builder_24px.svg" alt="time"/><input type="text" placeholder="Time"/></li>
+            <li><img class="img-settings" src="img/ic_account_box_24px.svg" alt="helpers"/><input type="text" placeholder="Helper(s)"/></li>
+            <hr id="blackhr"/>
+        </ul>
+        
+        	<h3>Instructions</h3>
+        	<button id="add-instructions">+</button> <!--implement something that adds a text field or something for instructions; also add a fixed button with a pencil after the user adds instructions; or not - the instructions can be edited when you tap on them-->
+    </div><!--end of page-->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script> 
+
+    <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="nativeDroid2/vendor/waves/waves.min.js"></script>
+    <script src="nativeDroid2/vendor/wow/wow.min.js"></script>
+    <script src="nativeDroid2/js/nativedroid2.js"></script>
+    <script src="css/mdl/material.min.js"></script>
+
+</body>
+</html>

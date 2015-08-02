@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Calendar Overview</title>
+<title>Schedule</title>
 	<meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
@@ -21,18 +21,39 @@
 
 <body>
 
-	<div data-role="page">
+	<div data-role="page" id="page1" data-url="page1" class="ui-page ui-body-c ui-page-active">
+    	<!--the panel has to either be before or after all the content of the page; http://demos.jquerymobile.com/1.4.2/panel/ for more info-->
+        <div data-role="panel" id="leftpanel" data-display="overlay" data-theme="a">
+        	<img id="avatar" src="img/anonymous_material.png" alt="user's avatar"/>
+            <p id="myname">Marina Gherghe</p>
+            <p id="myemail">marina@email.dk</p> <hr/>
+            <ul data-role="listview" data-icon="false" id="listpanelitems">
+            <!--ref for multi-page navigation http://demos.jquerymobile.com/1.1.0-rc.2/docs/pages/multipage-template.html-->
+            
+            <!--images taken from Google's github-->
+            	<li><a class="leftpanellinks" data-role="button" href="#page1" data-corners="false" data-shadow="false" data-iconshadow="false" tabindex="0"><img class ="imgtransparency" src="img/calendar.svg" alt="calendar"/>Schedule</a></li>
+                <li><a class="leftpanellinks" href="#page2"><img class ="imgtransparency" src="img/guides.svg" alt="guides">Guides</a></li>
+                <li><a class="leftpanellinks" href="messages.html"><img id="emailicon" class ="imgtransparency" src="img/email.svg" alt="messages">Messages</a></li><hr/>
+                <li><a class="leftpanellinks" href="help.html" rel="external"><img class ="imgtransparency" src="img/help.svg" alt="help">Help</a></li>
+                <li><a class="leftpanellinks" href="settings.html" rel="external"><img class ="imgtransparency" src="img/settings.svg" alt="settings">Settings</a></li>
+            <!--image taken from http://uxrepo.com/-->
+                <li><a class="leftpanellinks" href="logout.html" rel="external"><img id="logouticon" class ="imgtransparency" src="img/log-out-24px.svg" alt="logout">Log out</a></li>
+            </ul>
+        </div>
     	<div data-role="header" data-position="fixed">
-        	<img id="burger-menu" src="img/burger-menu.svg" alt="burger-menu"/>
-            <h1>Overview</h1>
-            <nav>
+        	<a href="#leftpanel" id="panelbutton"><img id="burger-menu" src="img/burger-menu.svg" alt="burger-menu"/></a>
+            <h1>Schedule</h1>
+            <!--take a look at the scrollable tabs section to see if it actually works when there's content in a tab http://www.getmdl.io/components/index.html#layout-section -->
+            <nav> 
             	<a href="#table-week-1" id="week1">Week 1</a>
                 <a href="#table-week-2" id="week2">Week 2</a>
                 <a href="#table-week-3" id="week3">Week 3</a>
             </nav>
         </div><!--end of data-role header-->
         
-        <div role="main" class="ui-content" data-insert="false" data-wow-delay="0s">
+        
+        <!--in case of stuff not working <div role="main" data-role="content" class="ui-content" data-inset="false" data-wow-delay="0s">-->
+        <div data-role="content" class="ui-content" data-inset="false"	role="main">
            <table data-role="table" class="ui-responsive ui-shadow" id="table-week-2">
            		<thead>
                     <tr>
@@ -230,9 +251,9 @@
                 </tbody>
            </table>
            
-           <button id="add-shift-entry">+</button>
+           <button id="add-new-entry">+</button>
         </div><!--end of main content-->
-    </div><!--end of page-->
+    </div><!--end of page 1-->
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
@@ -240,7 +261,6 @@
 
     <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-
     <script src="nativeDroid2/vendor/waves/waves.min.js"></script>
     <script src="nativeDroid2/vendor/wow/wow.min.js"></script>
     <script src="nativeDroid2/js/nativedroid2.js"></script>
