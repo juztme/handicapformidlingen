@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-	<title>Add schedule entry</title>
+	<title>Reading message</title>
 
 	<meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
@@ -32,7 +32,8 @@
 
 	<div data-role="header" data-position="fixed">
         <a href="#schedulePage" id="back-arrow"><img src="img/ic_arrow_back_white_36dp.png" alt="go back"/></a>
-        <h1>Add new entry</h1>
+        <h1>Compose</h1>
+        
         <!-- Right aligned menu below button; code taken from http://www.getmdl.io/components/index.html#menus-section -->
 		<button id="demo-menu-lower-right"
             class="mdl-button mdl-js-button mdl-button--icon">
@@ -41,26 +42,27 @@
 
         <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
             for="demo-menu-lower-right">
-          <li class="mdl-menu__item">Remove instructions</li>
-          <li class="mdl-menu__item">Remove entry</li>
+          <li class="mdl-menu__item">Save draft</li>
+          <li class="mdl-menu__item">Discard</li>
         </ul>
-            
+        
+		<button id="attach-file-button">
+          <img src="img/ic_attach_file_white_24dp.png" alt="attach file"/>
+        </button>
+        <span for="attach-file-button" class="mdl-tooltip">Attach file</span><!--applies a tooltip to the attach file button-->
+		<button id="send-button">
+			<img src="img/ic_send_white_24dp.png" alt="send message"/>
+		</button>
+         <span for="send-button" class="mdl-tooltip">Send message</span>
      </div><!--end of data-role header-->
 
 	<div data-role="content" class="ui-content" role="main">
     	
-        <h3 class="subtitles-for-guides">Important details</h3>
-    	<br/>
-        <ul data-role="listview" data-icon="false">
-            <li><img class="img-settings" src="img/calendar.svg" alt="date"/><input type="text" placeholder="Date"/></li>
-            <li><img class="img-settings" src="img/ic_query_builder_24px.svg" alt="time"/><input type="text" placeholder="Time"/></li>
-            <li><img class="img-settings" src="img/ic_account_box_24px.svg" alt="helpers"/><input type="text" placeholder="Helper(s)"/></li>
-            <hr id="blackhr"/>
-        </ul>
+        <h3 class="fields-opacity">From</h3><div class="email-details">marina@email.dk</div><hr/>
+        <h3 class="fields-opacity">To</h3><div class="email-details"><input type="text"/></div><hr/>
+        <textarea rows="1" cols="2" placeholder="Subject"></textarea>
+        <textarea rows="25" cols="100" placeholder="Compose mail"></textarea>
         
-        	<h3 class="subtitles-for-guides">Instructions</h3>
-        	<button id="add-instructions">+</button> 
-            <span for="add-instructions" class="mdl-tooltip">Add instructions</span>
     </div><!--end of page-->
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
