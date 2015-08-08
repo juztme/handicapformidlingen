@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Settings</title>
+
+	<meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+	
+    <!-- Imports -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+    <!--nativedroid made by http://nativedroid.godesign.ch-->
+    <link rel="stylesheet" href="nativeDroid2/vendor/waves/waves.min.css" />
+    <link rel="stylesheet" href="nativeDroid2/vendor/wow/animate.css" />
+    <link rel="stylesheet" href="nativeDroid2/css/nativedroid2.css" />
+	<!--Google's material design items-->
+    <link rel="stylesheet" href="css/mdl/material.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Custom -->
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+<!--beginning of page 2-->
+    <div data-role="page" id="page2" data-url="page2">
+    <div data-role="panel" id="leftpanel" data-display="overlay" data-theme="a">
+        	<img id="avatar" src="img/anonymous_material.png" alt="user's avatar"/>
+            <p id="myname">Marina Gherghe</p>
+            <p id="myemail">marina@email.dk</p> <hr/>
+            <ul data-role="listview" data-icon="false" id="listpanelitems">
+            <!--images taken from Google's github-->
+            	<li><a class="leftpanellinks" data-role="button" href="calendar.html" data-corners="false" data-shadow="false" data-iconshadow="false" tabindex="0" rel="external"><img class ="imgtransparency" src="img/calendar.svg" alt="calendar"/>Schedule</a></li>
+                <li><a class="leftpanellinks" href="guides.html" rel="external"><img class ="imgtransparency" src="img/guides.svg" alt="guides">Guides</a></li>
+                <li><a class="leftpanellinks" href="messageList.html" rel="external"><img id="emailicon" class ="imgtransparency" src="img/email.svg" alt="messages">Messages</a></li><hr/>
+                <li><a class="leftpanellinks" href="help.html" rel="external"><img class ="imgtransparency" src="img/help.svg" alt="help">Help</a></li>
+                <li><a class="leftpanellinks" href="settings.html" rel="external"><img class ="imgtransparency" src="img/settings.svg" alt="settings">Settings</a></li>
+            <!--image taken from http://uxrepo.com/-->
+                <li><a class="leftpanellinks" href="index.html" rel="external"><img id="logouticon" class ="imgtransparency" src="img/log-out-24px.svg" alt="logout">Log out</a></li>
+            </ul>
+        </div> <!--end of navigation panel-->
+        
+        <div data-role="header" data-position="fixed">
+        	<a href="#leftpanel" id="panelbutton"><img id="burger-menu" src="img/burger-menu.svg" alt="burger-menu"/></a>
+            <h1>Settings</h1>
+            <form id="searchbar" action="#"> <!--search bar code taken from http://www.getmdl.io/components/index.html#textfields-section-->
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable textfield-demo">
+                <label class="mdl-button mdl-js-button mdl-button--icon" for="sample6">
+                  <i class="material-icons">search</i> <!--i assume this is the list of icons that you can use http://materializecss.com/icons.html-->
+                </label>
+                <div class="mdl-textfield__expandable-holder">
+                  <input class="mdl-textfield__input" type="text" id="sample6" />
+                  <label class="mdl-textfield__label"></label>
+                </div>
+              </div>
+            </form>
+        </div><!--end of data-role header-->
+        
+        <div data-role="content" class="ui-content" data-inset="false"	role="main">
+        <!--argue why it's a normal list and not cards https://www.google.com/design/spec/components/cards.html#-->
+        
+        <h2 class="subtitles-for-guides">Visual Settings</h2>
+        
+    	<ul data-role="listview" class="ui-listview" id="guideslist">
+        	<li class="ui-li-has-thumb">
+            	<a href="#" id="guidebutton" class="ui-btn waves-effect waves-button">
+                	<img id="font-size-settings" src="img/fontsize-36px.png" alt="font size"/>
+                	<h3 class="name-title">Font size</h3>
+                    <p class="name-title">Big Medium Small</p> 
+                </a>
+            </li>
+            
+            <li class="ui-li-has-thumb">
+            	<a href="#" id="guidebutton" class="ui-btn waves-effect waves-button">
+                	<img id="font-size-settings" src="img/fi-paint-bucket-36px.png" alt="change color"/>
+                	<h3 class="name-title">Helper/Citizen color</h3>
+                    <p class="name-title"></p> 
+                </a>
+            </li>
+        </ul>
+        <h2 class="subtitles-for-guides">Audio Settings</h2>
+        <ul data-role="listview" class="ui-listview" id="guideslist">
+            <li class="ui-li-has-thumb">
+                <a href="#" id="guidebutton" class="ui-btn waves-effect waves-button">
+                    <img id="text-to-speech-settings" src="img/sound-36px.png" alt="set text to speech"/>
+                    <h3 class="name-title">Text-to-speech</h3>
+                    <select name="flip-mini" id="flip-mini" data-role="flipswitch"> <!--documentation here http://api.jquerymobile.com/flipswitch/-->
+                        <option value="off">Off</option>
+                        <option value="on">On</option>
+                    </select> 
+                </a>
+             </li>
+        </ul>
+
+      </div> <!--end of data-role content-->
+	</div> <!--end of page 2-->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script> 
+
+    <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="nativeDroid2/vendor/waves/waves.min.js"></script>
+    <script src="nativeDroid2/vendor/wow/wow.min.js"></script>
+    <script src="nativeDroid2/js/nativedroid2.js"></script>
+    <script src="css/mdl/material.min.js"></script>
+</body>
+</html>

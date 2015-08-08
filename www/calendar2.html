@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Schedule</title>
+	<meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+	
+    <!-- Imports -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+    <!--nativedroid made by http://nativedroid.godesign.ch-->
+    <link rel="stylesheet" href="nativeDroid2/vendor/waves/waves.min.css" />
+    <link rel="stylesheet" href="nativeDroid2/vendor/wow/animate.css" />
+    <link rel="stylesheet" href="nativeDroid2/css/nativedroid2.css" />
+    
+    <!-- Custom -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+	<div data-role="page" id="page1" data-url="page1" class="ui-page ui-body-c ui-page-active">
+    	<!--the panel has to either be before or after all the content of the page; http://demos.jquerymobile.com/1.4.2/panel/ for more info-->
+        <div data-role="panel" id="leftpanel" data-display="overlay" data-theme="a">
+        	<img id="avatar" src="img/anonymous_material.png" alt="user's avatar"/>
+            <p id="myname">Marina Gherghe</p>
+            <p id="myemail">marina@email.dk</p> <hr/>
+            <ul data-role="listview" data-icon="false" id="listpanelitems">
+            <!--ref for multi-page navigation http://demos.jquerymobile.com/1.1.0-rc.2/docs/pages/multipage-template.html-->
+            
+            <!--images taken from Google's github-->
+            	<li><a class="leftpanellinks" data-role="button" href="calendar.html" data-corners="false" data-shadow="false" data-iconshadow="false" tabindex="0" rel="external"><img class ="imgtransparency" src="img/calendar.svg" alt="calendar"/>Schedule</a></li>
+                <li><a class="leftpanellinks" href="guides.html" rel="external"><img class ="imgtransparency" src="img/guides.svg" alt="guides">Guides</a></li>
+                <li><a class="leftpanellinks" href="messageList.html" rel="external"><img id="emailicon" class ="imgtransparency" src="img/email.svg" alt="messages">Messages</a></li><hr/>
+                <li><a class="leftpanellinks" href="help.html" rel="external"><img class ="imgtransparency" src="img/help.svg" alt="help">Help</a></li>
+                <li><a class="leftpanellinks" href="settings.html" rel="external"><img class ="imgtransparency" src="img/settings.svg" alt="settings">Settings</a></li>
+            <!--image taken from http://uxrepo.com/-->
+                <li><a class="leftpanellinks" href="index.html" rel="external"><img id="logouticon" class ="imgtransparency" src="img/log-out-24px.svg" alt="logout">Log out</a></li>
+            </ul>
+        </div>
+    	<div data-role="header" data-position="fixed">
+        	<a href="#leftpanel" id="panelbutton"><img id="burger-menu" src="img/burger-menu.svg" alt="burger-menu"/></a>
+            <h1>Shifts</h1>
+            <!--take a look at the scrollable tabs section to see if it actually works when there's content in a tab http://www.getmdl.io/components/index.html#layout-section -->
+
+            	<p class="weeks" id="week1">WEEK 1</p>
+               	<p class="weeks" id="week2">WEEK 2</p>
+                <p class="weeks" id="week3">WEEK 3</p>
+
+        </div><!--end of data-role header-->
+        
+        
+        <!--in case of stuff not working <div role="main" data-role="content" class="ui-content" data-inset="false" data-wow-delay="0s">-->
+        <div data-role="content" class="ui-content" data-inset="false"	role="main">
+           <table data-role="table" class="ui-responsive ui-shadow" id="table-week-2">
+           		<thead>
+                    <tr>
+                    	<th></th>
+                        <th>00:00-06:00</th>
+                        <th>06:00-12:00</th>
+                        <th>12:00-18:00</th>
+                        <th>18:00-00:00</th>
+                    </tr>
+                </thead>
+                <tbody>
+                	<tr>
+                    	<td class="time">M</td>
+                        <td class="red-helper"></td>
+                        <td class="orange-helper"></td>
+                        <td></td> <!--fill the rest of the entires with empty TDs so that there will be a complete underline on the page-->
+                        <td></td>
+
+                    </tr>
+                    <tr>
+                    	<td class="time">T</td>
+                        <td class="red-helper"></td>
+                        <td class="orange-helper"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                    	<td class="time">W</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                    	<td class="time">T</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                    	<td class="time">F</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                    	<td class="time">S</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="blue-helper"></td>
+                    </tr>
+                    <tr>
+                    	<td class="time">S</td>
+                        <td></td>
+                        <td></td>
+                        <td class="blue-helper"></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+           </table>
+                  
+           <button id="add-new-entry">+</button>
+           <!-- comment this one out because it appears as a text for people who don't have the CITIZEN userType <span for="add-new-entry" class="mdl-tooltip">Add entry</span>-->
+        </div><!--end of main content-->
+    </div><!--end of page 1-->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="nativeDroid2/vendor/waves/waves.min.js"></script>
+    <script src="nativeDroid2/vendor/wow/wow.min.js"></script>
+    <script src="nativeDroid2/js/nativedroid2.js"></script>
+    <script type="text/javascript" src="js/calendar.js"></script>
+    
+    <script>
+    
+		$(function(){
+			$(".weeks").tabs();
+		});
+    
+    </script>
+</body>
+</html>

@@ -31,7 +31,7 @@
 <body>
 
 	<div data-role="header" data-position="fixed">
-        <a href="#schedulePage" id="back-arrow"><img src="img/ic_arrow_back_white_36dp.png" alt="go back"/></a>
+        <a href="calendar.html" id="back-arrow" rel="external"><img src="img/ic_arrow_back_white_36dp.png" alt="go back"/></a>
         <h1>1st April</h1>
         <!-- Right aligned menu below button; code taken from http://www.getmdl.io/components/index.html#menus-section -->
 		<button id="demo-menu-lower-right"
@@ -41,8 +41,9 @@
 
         <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
             for="demo-menu-lower-right">
-          <li class="mdl-menu__item">Remove instructions</li>
+          <li id="remove-instructions" class="mdl-menu__item">Remove instructions</li>
           <li class="mdl-menu__item">Remove entry</li>
+          <li class="mdl-menu__item">Send alert to all helpers</li>
         </ul>
             
      </div><!--end of data-role header-->
@@ -53,37 +54,45 @@
     	<br/>
         <ul data-role="listview" data-icon="false">
             <li><img class="img-settings" src="img/calendar.svg" alt="date"/><p class="editableEntryData" contenteditable="true">1 April 2015</p></li>
-            <li><img class="img-settings" src="img/ic_query_builder_24px.svg" alt="time"/><p class="editableEntryData" contenteditable="true">12:00-13:00</p></li>
+            <li><img class="img-settings" src="img/ic_query_builder_24px.svg" alt="time"/><p class="editableEntryData" contenteditable="true">12:00-15:00</p></li>
+            <li><img id="money-size" class="img-settings" src="img/android-attach-money-24px.png" alt="payment"><p class="editableEntryData" contenteditable="true">120DKK</p></li>
             <li><img class="img-settings" src="img/ic_account_box_24px.svg" alt="helpers"/><p class="editableEntryData" contenteditable="true">Kim Jensen</p></li>
             <hr id="blackhr"/>
         </ul>
         
         	<h3 class="subtitles-for-guides">Instructions</h3>
+            <button id="add-instructions-again">+</button> 
         	<button id="edit-instructions"><img src="img/ic_edit_24px.svg" alt="edit instructions"/></button>
             <span for="edit-instructions" class="mdl-tooltip">Edit instructions</span>
-			<div data-role="collapsibleset">
-            <!--this is a good list of icons http://demos.jquerymobile.com/1.4.5/icons/-->
-                <div data-role="collapsible" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
-                    <h4>What to buy</h4>
-                    <p>Tomatoes, potatoes, cabbage</p>
-                </div>
-                <div data-role="collapsible" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
-                	<h4>Places to go</h4>
-                    <p>The museum, the garage, the restaurant</p>
-                </div>
-            </div><!--end of collapsibleset-->
+                <div data-role="collapsibleset">
+                <!--this is a good list of icons http://demos.jquerymobile.com/1.4.5/icons/-->
+                    <div data-role="collapsible" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" class="list-of-instructions">
+                        <h4>What to buy</h4>
+                        <p>Tomatoes, potatoes, cabbage</p>
+                        <p class="custom-tags">#shopping, #groceries</p>
+                    </div>
+                    <div data-role="collapsible" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" class="list-of-instructions">
+                        <h4>Places to go</h4>
+                        <p>The museum, the garage, the restaurant</p>
+                        <p class="custom-tags">#driving, #outdoors</p>
+                    </div>
+                    <div data-role="collapsible" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" id="new-item-of-instructions">
+                        <h4 contenteditable="true">Add title</h4>
+                        <p contenteditable="true">Add instructions</p>
+                        <p contenteditable="true" class="add-custom-tags">Add tags</p>
+                    </div>
+                </div><!--end of collapsibleset-->
     </div><!--end of page-->
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/index.js"></script> 
-
     <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
     <script src="nativeDroid2/vendor/waves/waves.min.js"></script>
     <script src="nativeDroid2/vendor/wow/wow.min.js"></script>
     <script src="nativeDroid2/js/nativedroid2.js"></script>
     <script src="css/mdl/material.min.js"></script>
+    <script src="js/existentScheduleEntry.js"></script> 
 
 </body>
 </html>

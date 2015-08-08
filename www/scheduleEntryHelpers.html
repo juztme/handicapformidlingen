@@ -31,7 +31,7 @@
 <body>
 
 	<div data-role="header" data-position="fixed">
-        <a href="#schedulePage" id="back-arrow"><img src="img/ic_arrow_back_white_36dp.png" alt="go back"/></a>
+        <a href="calendar.html" id="back-arrow" rel="external"><img src="img/ic_arrow_back_white_36dp.png" alt="go back"/></a>
         <h1>1st April</h1>
         <!-- Right aligned menu below button; code taken from http://www.getmdl.io/components/index.html#menus-section -->
 		<button id="demo-menu-lower-right"
@@ -52,9 +52,10 @@
         <h3 class="subtitles-for-guides">Important details</h3>
     	<br/>
         <ul data-role="listview" data-icon="false">
-            <li><img class="img-settings" src="img/calendar.svg" alt="date"/><p class="editableEntryData" contenteditable="true">1 April 2015</p></li>
-            <li><img class="img-settings" src="img/ic_query_builder_24px.svg" alt="time"/><p class="editableEntryData" contenteditable="true">12:00-13:00</p></li>
-            <li><img class="img-settings" src="img/ic_account_box_24px.svg" alt="helpers"/><p class="editableEntryData" contenteditable="true">Kim Jensen</p></li>
+            <li><img class="img-settings" src="img/calendar.svg" alt="date"/><p class="editableEntryData">1 April 2015</p></li>
+            <li><img class="img-settings" src="img/ic_query_builder_24px.svg" alt="time"/><p class="editableEntryData">12:00-13:00</p></li>
+            <li><img id="money-size" class="img-settings" src="img/android-attach-money-24px.png" alt="payment"><p class="editableEntryData">120DKK</p></li>
+            <li><img class="img-settings" src="img/ic_account_box_24px.svg" alt="helpers"/><p class="editableEntryData">Kim Jensen</p></li>
             <hr id="blackhr"/>
         </ul>
         

@@ -31,24 +31,23 @@
             <!--ref for multi-page navigation http://demos.jquerymobile.com/1.1.0-rc.2/docs/pages/multipage-template.html-->
             
             <!--images taken from Google's github-->
-            	<li><a class="leftpanellinks" data-role="button" href="#page1" data-corners="false" data-shadow="false" data-iconshadow="false" tabindex="0"><img class ="imgtransparency" src="img/calendar.svg" alt="calendar"/>Schedule</a></li>
-                <li><a class="leftpanellinks" href="#page2"><img class ="imgtransparency" src="img/guides.svg" alt="guides">Guides</a></li>
-                <li><a class="leftpanellinks" href="messages.html"><img id="emailicon" class ="imgtransparency" src="img/email.svg" alt="messages">Messages</a></li><hr/>
+            	<li><a class="leftpanellinks" data-role="button" href="calendar.html" data-corners="false" data-shadow="false" data-iconshadow="false" tabindex="0" rel="external"><img class ="imgtransparency" src="img/calendar.svg" alt="calendar"/>Schedule</a></li>
+                <li><a class="leftpanellinks" href="guides.html" rel="external"><img class ="imgtransparency" src="img/guides.svg" alt="guides">Guides</a></li>
+                <li><a class="leftpanellinks" href="messageList.html" rel="external"><img id="emailicon" class ="imgtransparency" src="img/email.svg" alt="messages">Messages</a></li><hr/>
                 <li><a class="leftpanellinks" href="help.html" rel="external"><img class ="imgtransparency" src="img/help.svg" alt="help">Help</a></li>
                 <li><a class="leftpanellinks" href="settings.html" rel="external"><img class ="imgtransparency" src="img/settings.svg" alt="settings">Settings</a></li>
             <!--image taken from http://uxrepo.com/-->
-                <li><a class="leftpanellinks" href="logout.html" rel="external"><img id="logouticon" class ="imgtransparency" src="img/log-out-24px.svg" alt="logout">Log out</a></li>
+                <li><a class="leftpanellinks" href="index.html" rel="external"><img id="logouticon" class ="imgtransparency" src="img/log-out-24px.svg" alt="logout">Log out</a></li>
             </ul>
         </div>
     	<div data-role="header" data-position="fixed">
         	<a href="#leftpanel" id="panelbutton"><img id="burger-menu" src="img/burger-menu.svg" alt="burger-menu"/></a>
             <h1>Schedule</h1>
             <!--take a look at the scrollable tabs section to see if it actually works when there's content in a tab http://www.getmdl.io/components/index.html#layout-section -->
-            <nav> 
-            	<a href="#table-week-1" id="week1">Week 1</a>
-                <a href="#table-week-2" id="week2">Week 2</a>
-                <a href="#table-week-3" id="week3">Week 3</a>
-            </nav>
+            <p class="weeks" id="week1">WEEK 1</p>
+            <p class="weeks" id="week2">WEEK 2</p>
+            <p class="weeks" id="week3">WEEK 3</p>
+
         </div><!--end of data-role header-->
         
         
@@ -58,213 +57,78 @@
            		<thead>
                     <tr>
                     	<th></th>
-                        <th>M</th>
-                        <th>T</th>
-                        <th>W</th>
-                        <th>T</th>
-                        <th>F</th>
-                        <th>S</th>
-                        <th>S</th>
+                        <th class="hours">00:00-06:00</th>
+                        <th class="hours">06:00-12:00</th>
+                        <th class="hours">12:00-18:00</th>
+                        <th class="hours">18:00-00:00</th>
                     </tr>
                 </thead>
                 <tbody>
                 	<tr>
-                    	<td class="time">06:00</td>
-                        <td class="red-helper"></td>
-                        <td class="orange-helper"></td>
-                        <td></td> <!--fill the rest of the entires with empty TDs so that there will be a complete underline on the page-->
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                    	<td class="time">M</td>
+                        <td class="red-helper">Kim Jensen</td>
+                        <td class="orange-helper">Marie Larsen</td>
+                        <td>Tap to add plans</td> <!--fill the rest of the entires with empty TDs so that there will be a complete underline on the page-->
+                        <td>Tap to add plans</td>
+
                     </tr>
                     <tr>
-                    	<td class="time">07:00</td>
-                        <td class="red-helper"></td>
-                        <td class="orange-helper"></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                    	<td class="time">T</td>
+                        <td class="red-helper">Kim Jensen</td>
+                        <td class="orange-helper">Marie Larsen</td>
+                        <td>Tap to add plans</td>
+                        <td>Tap to add plans</td>
                     </tr>
                     <tr>
-                    	<td class="time">08:00</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                    	<td class="time">W</td>
+                        <td>Tap to add plans</td>
+                        <td>Tap to add plans</td>
+                        <td class="red-helper">Kim Jensen</td>
+                        <td>Tap to add plans</td>
                     </tr>
                     <tr>
-                    	<td class="time">09:00</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="pink-helper"></td>
-                        <td class="orange-helper"></td>
+                    	<td class="time">T</td>
+                        <td>Tap to add plans</td>
+                        <td>Tap to add plans</td>
+                        <td>Tap to add plans</td>
+                        <td>Tap to add plans</td>
                     </tr>
                     <tr>
-                    	<td class="time">10:00</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="pink-helper"></td>
-                        <td class="orange-helper"></td>
+                    	<td class="time">F</td>
+                        <td>Tap to add plans</td>
+                        <td>Tap to add plans</td>
+                        <td>Tap to add plans</td>
+                        <td>Tap to add plans</td>
                     </tr>
                     <tr>
-                    	<td class="time">11:00</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                    	<td class="time">S</td>
+                        <td>Tap to add plans</td>
+                        <td>Tap to add plans</td>
+                        <td>Tap to add plans</td>
+                        <td class="blue-helper">Christine Belle</td>
                     </tr>
                     <tr>
-                    	<td class="time">12:00</td>
-                        <td></td>
-                        <td></td>
-                        <td class="blue-helper"></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                    	<td class="time">13:00</td>
-                        <td></td>
-                        <td></td>
-                        <td class="blue-helper"></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                    	<td class="time">14:00</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                    	<td class="time">15:00</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                    	<td class="time">16:00</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="orange-helper"></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                    	<td class="time">17:00</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="orange-helper"></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                    	<td class="time">18:00</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                    	<td class="time">19:00</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="blue-helper"></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                    	<td class="time">20:00</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="blue-helper"></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                    	<td class="time">21:00</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="red-helper"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                    	<td class="time">22:00</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="red-helper"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                    	<td class="time">23:00</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                    	<td class="time">S</td>
+                        <td>Tap to add plans</td>
+                        <td>Tap to add plans</td>
+                        <td class="blue-helper">Christine Belle</td>
+                        <td>Tap to add plans</td>
                     </tr>
                 </tbody>
            </table>
            
            <button id="add-new-entry">+</button>
-           <span for="add-new-entry" class="mdl-tooltip">Add entry</span>
+           <!-- comment this one out because it appears as a text for people who don't have the CITIZEN userType <span for="add-new-entry" class="mdl-tooltip">Add entry</span>-->
         </div><!--end of main content-->
     </div><!--end of page 1-->
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-
     <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
     <script src="nativeDroid2/vendor/waves/waves.min.js"></script>
     <script src="nativeDroid2/vendor/wow/wow.min.js"></script>
     <script src="nativeDroid2/js/nativedroid2.js"></script>
-    
+    <script type="text/javascript" src="js/calendar.js"></script>
 </body>
 </html>
