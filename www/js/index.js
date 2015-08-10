@@ -32,8 +32,12 @@ $(function(){//this makes sure that jquery is loaded before it does anything
 		var successCallback = function(loginSession){
 			if(loginSession.access){//checks if the user is in the database and has access to the next page
 				sessionStorage.setItem("loginSession",JSON.stringify(loginSession));//acts like a cookie
-				window.location.href="calendar.html";
 				
+				if(loginSession.userType==="CITIZEN"){
+					window.location.href="calendar.html";
+				}else{
+					window.location.href="calendarHelpers.html";
+				}
 			}else{
 				$("#error_login").fadeIn("slow");
 			}
@@ -47,10 +51,15 @@ $(function(){//this makes sure that jquery is loaded before it does anything
 		  data: JSON.stringify(userCredentials),//JSON.stringify serializes the object; JSON.parse deserializes it; basically, it transforms JS objects into JSON and the reverse
 		  success: successCallback,
 		}
-		$.ajax(settings);//you call ajax with settings as a parameter; to do a login request
-		
-		
+		$.ajax(settings);//you call ajax with settings as a parameter; to do a login request	
 	});
+	
+	//change header of the guide example when the user clicks on the edit button
+	$("#edit-instructions").on("click",function(){
+		$("#primaryHeader").hide();
+		$("#secondaryHeader").show();
+	});
+	
 });
 
  

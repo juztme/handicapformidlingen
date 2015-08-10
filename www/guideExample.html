@@ -30,7 +30,7 @@
 
 <body>
 
-	<div data-role="header" data-position="fixed">
+	<div id="primaryHeader" data-role="header" data-position="fixed">
         <a href="guides.html" id="back-arrow" rel="external"><img src="img/ic_arrow_back_white_36dp.png" alt="go back"/></a>
         <h1>Clean the bathroom</h1>
         <!-- Right aligned menu below button; code taken from http://www.getmdl.io/components/index.html#menus-section -->
@@ -47,7 +47,14 @@
         </ul>
             
      </div><!--end of data-role header-->
-
+	
+    
+    <div id="secondaryHeader" data-role="header" data-position="fixed" style="display:none;">
+        <a href="guides.html" id="back-arrow" rel="external"><img src="img/ic_arrow_back_white_36dp.png" alt="go back"/></a>
+        <h1>IDk</h1>    
+    </div><!--end of data-role header-->
+    
+    
 	<div data-role="content" class="ui-content" role="main">
     	
        <h2 class="subtitles-for-guides">Types of cleaning products</h2>
@@ -63,14 +70,12 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/index.js"></script> 
-
     <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
     <script src="nativeDroid2/vendor/waves/waves.min.js"></script>
     <script src="nativeDroid2/vendor/wow/wow.min.js"></script>
     <script src="nativeDroid2/js/nativedroid2.js"></script>
     <script src="css/mdl/material.min.js"></script>
-
+    <script type="text/javascript" src="js/index.js"></script> 
 </body>
 </html>
