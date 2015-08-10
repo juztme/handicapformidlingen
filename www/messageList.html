@@ -29,8 +29,8 @@
     <div data-role="page" id="page2" data-url="page2">
     <div data-role="panel" id="leftpanel" data-display="overlay" data-theme="a">
         	<img id="avatar" src="img/anonymous_material.png" alt="user's avatar"/>
-            <p id="myname">Marina Gherghe</p>
-            <p id="myemail">marina@email.dk</p> <hr/>
+            <p id="myname"></p>
+            <p id="myemail"></p> <hr/>
             <ul data-role="listview" data-icon="false" id="listpanelitems">
             <!--images taken from Google's github-->
             	<li><a class="leftpanellinks" data-role="button" href="calendar.html" data-corners="false" data-shadow="false" data-iconshadow="false" tabindex="0" rel="external"><img class ="imgtransparency" src="img/calendar.svg" alt="calendar"/>Schedule</a></li>
@@ -64,7 +64,7 @@
         
     	<ul data-role="listview" class="ui-listview" id="guideslist">
         	<li class="ui-li-has-thumb">
-            	<a href="messageReading.html" id="guidebutton" class="ui-btn waves-effect waves-button">
+            	<a href="messageReading.html" id="guidebutton" class="ui-btn waves-effect waves-button" rel="external">
                 	<img class="msg-avatar" src="img/ic_account_circle_48px.svg" alt="person's avatar"/>
                 	<h3 class="name-title">Christine Belle</h3>
                     <p class="name-title">Today's plans</p> 
@@ -139,5 +139,6 @@
     <script src="nativeDroid2/vendor/wow/wow.min.js"></script>
     <script src="nativeDroid2/js/nativedroid2.js"></script>
     <script src="css/mdl/material.min.js"></script>
+    <script type="text/javascript" src="js/nameAndEmail.js"></script>
 </body>
 </html>
