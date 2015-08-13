@@ -51,21 +51,21 @@
     
     <div id="secondaryHeader" data-role="header" data-position="fixed" style="display:none;">
         <a href="guides.html" id="back-arrow" rel="external"><img src="img/ic_arrow_back_white_36dp.png" alt="go back"/></a>
-        <h1>IDk</h1>    
+        <h1>Editing tools go here</h1>    
     </div><!--end of data-role header-->
     
     
 	<div data-role="content" class="ui-content" role="main">
-    	
-       <h2 class="subtitles-for-guides">Types of cleaning products</h2>
-       <p>You will need to grab the following cleaning products:<br/>
-       - mop;<br/>
-       - detergent;<br/>
-       - green floor cleaning solution.<br/>
-       </p>
-            
-            <button id="edit-instructions"><img src="img/ic_edit_24px.svg" alt="edit instructions"/></button>
-            <span for="edit-instructions" class="mdl-tooltip">Edit guide</span>
+           <div id="instructions-content">
+               <h2 id="some-subtitle" class="subtitles-for-guides">Types of cleaning products</h2>
+               <p>You will need to grab the following cleaning products:<br/>
+               - mop;<br/>
+               - detergent;<br/>
+               - green floor cleaning solution.<br/>
+               </p>
+           </div><!--end of instructions-content-->
+           <button id="edit-instructions-content"><img src="img/ic_edit_24px.svg" alt="edit instructions"/></button>
+           <span for="edit-instructions-content" class="mdl-tooltip">Edit guide</span>
     </div><!--end of page-->
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -77,5 +77,6 @@
     <script src="nativeDroid2/js/nativedroid2.js"></script>
     <script src="css/mdl/material.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script> 
+    <script type="text/javascript" src="js/guideExample.js"></script> 
 </body>
 </html>

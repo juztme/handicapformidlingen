@@ -28,6 +28,13 @@ $(function(){//ensures that jquery is loaded
 		$("#week" + currentSlide.currentSlide).addClass('selected');
 	});
 	
+	$("#kim-jensen").on("click",function(){
+		window.location.href="existentScheduleEntry.html";
+	});
+	$("#ole-andersen").on("click",function(){
+		window.location.href="scheduleEntryHelpers.html";
+	});
+	
 	var session = JSON.parse(sessionStorage.getItem("loginSession"));
 	if (!session) return;
 	
