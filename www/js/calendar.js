@@ -9,7 +9,6 @@ $(function(){//ensures that jquery is loaded
 		slidesToShow:1,
 		infinite:false
       });
-	//$slider.slickGoTo(1); -in the console it says that it's not a function 
 	
 	$("#week0").on('click',function(){
 		$slider.slick('slickGoTo',0);
